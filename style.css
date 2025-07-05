@@ -1,63 +1,66 @@
-/* ベース設定 */
 body {
-  background: #0a0a0a;  /* ほぼ真っ黒 */
-  color: #ddd;          /* 明るすぎない文字色 */
-  font-family: 'Courier New', Courier, monospace; /* タイプ感のあるフォント */
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
+  background: #000;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
   line-height: 1.8;
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
 }
 
-/* 見出し */
 h1 {
-  font-size: 2rem;
+  border-bottom: 3px solid #f00;
+  padding-bottom: 10px;
   text-transform: uppercase;
-  border-top: 4px solid #e63946;
-  border-bottom: 4px solid #e63946;
-  padding: 20px 0;
-  text-align: center;
-  letter-spacing: 2px;
+  font-size: 2rem;
 }
 
 h2 {
-  margin-top: 2rem;
-  border-left: 4px solid #e63946;
-  padding-left: 0.6rem;
-  font-size: 1.2rem;
+  border-left: 5px solid #0f0;
+  padding-left: 10px;
+  margin-top: 40px;
 }
 
-/* セクションボックス */
-.section {
-  background: #111;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 4px;
+section {
+  border: 1px solid #0f0;
+  background: rgba(0, 255, 0, 0.05);
+  padding: 20px;
+  margin: 20px 0;
 }
 
-/* リスト（必要な場合） */
-ul {
-  list-style: disc inside;
-}
-
-/* 強調 */
-strong {
-  color: #f72585;
-}
-
-/* 画像 */
-img {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  filter: grayscale(100%) contrast(120%) brightness(90%);
-  border: 4px solid #333;
-}
-
-/* フッター（必要なら） */
-footer {
-  margin-top: 3rem;
+.warning {
+  color: #f00;
+  font-weight: bold;
   text-align: center;
-  font-size: 0.8rem;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  animation: blink 1s infinite;
+}
+
+strong {
+  color: #f00;
+}
+
+ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+pre {
+  background: #111;
+  border: 1px solid #0f0;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9rem;
   color: #555;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }
